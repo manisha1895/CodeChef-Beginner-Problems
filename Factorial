@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i;
+  cin>>T;
+  int x,j,ZN;
+  for(i=0;i<T;i++){
+  	cin>>x;
+  	ZN=0;
+  	for(j=5;j<=x;j=j*5){
+  		ZN += x/j;
+  	}
+  	cout<<ZN<<endl;
+  }
+  return 0;
+  
+}  
