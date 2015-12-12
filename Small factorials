@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,x,j,k,dig,carry,y;
+  cin>>T;
+  int a[200];
+  for(i=0;i<T;i++){
+  	cin>>x;
+  	a[0]=1;
+  	dig=1;
+  	carry=0;
+  	for(j=1;j<=x;j++){
+  	  for(k=0;k<dig;k++){
+  	  	y = a[k]*j + carry;
+  	  	a[k]=y%10;
+  	  	carry = y/10;
+  	  }	
+  	  while(carry>0){
+  	  	a[dig]=carry%10;
+  	  	dig++;
+  	  	carry = carry/10;
+  	  }
+  	}
+  	for(j=dig-1;j>=0;j--){
+  		cout<<a[j];
+  	}
+  	cout<<endl;
+  }
+  return 0;
+  
+}  
