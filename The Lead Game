@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int rounds,i;
+  cin>>rounds;
+  int p1=0,p2=0,lead=0,maxlead=0,currwinner,winner,x,y;
+  for(i=0;i<rounds;i++){
+  	cin>>x>>y;
+  	p1 += x;
+  	p2 += y;
+  	if(p1>p2) {
+  		lead = p1-p2;
+  		currwinner=1;
+    }
+  	else {
+  		lead=p2-p1;
+  		currwinner=2;
+    }
+  	if(maxlead<lead) {
+        maxlead=lead;
+        winner=currwinner;
+    }
+  }
+  cout<<winner<<" "<<maxlead;
+  
+  return 0;
+  
+}  
+ 
