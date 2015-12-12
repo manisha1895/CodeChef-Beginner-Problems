@@ -1,0 +1,22 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+  int X;
+  float Y;
+  cin>>X>>Y;
+  if(X>Y || (X%5)!=0) { //insufficient funds or withdrawal amount not a multiple of 5
+    cout<<fixed;
+    cout<<setprecision(2);
+    cout<<Y;
+  }
+  else {
+  	if(Y>(X+0.5)) Y = Y-X-0.5;
+    cout<<fixed;
+    cout<<setprecision(2);
+    cout<<Y;
+  }
+  
+  return 0;
+  
+}  
