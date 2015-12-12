@@ -1,0 +1,33 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int gcd(int x,int y){
+	while(x!=y){
+		if(x>y) x-=y;
+		else y-=x;
+	}
+	return x;
+}
+int main(){
+  int t,i,n,j;
+  cin>>t;
+  for(i=0;i<t;i++){
+  	cin>>n;
+  	int ing[n];
+  	for(j=0;j<n;j++){
+  		cin>>ing[j];
+  	}
+  	int hcf = ing[0];
+  	for(j=1;j<n;j++){
+  		hcf = gcd(hcf,ing[j]);
+  	}
+  	
+  	for(j=0;j<n;j++){
+  			ing[j] /= hcf;
+  			cout<<ing[j]<<" ";
+  	}
+  	cout<<endl;
+  }
+  return 0;
+  
+}  
