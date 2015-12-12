@@ -1,0 +1,18 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+  float B,LS,RS;
+  int T,i;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>B>>LS;
+  	RS = sqrt(pow(LS,2)-pow(B,2));
+  	cout<<RS<<" ";
+  	RS = sqrt(pow(LS,2)+pow(B,2));
+  	cout<<RS<<endl;
+  }
+  return 0;
+  
+}  
+ 
