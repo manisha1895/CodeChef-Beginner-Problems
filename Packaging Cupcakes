@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,x,ans;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>x;
+  	if(x%2==0) ans = (x+2)/2;
+  	else ans = (x+1)/2;
+  	cout<<ans<<endl;
+  }
+  return 0;
+  
+}  
