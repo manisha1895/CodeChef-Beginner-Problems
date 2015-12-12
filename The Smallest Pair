@@ -1,0 +1,27 @@
+#include<iostream>
+#include<limits.h>
+using namespace std;
+int main(){
+  int T,i,N,j,k;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>N;
+  	int seq[N];
+  	for(j=0;j<N;j++){
+  		cin>>seq[j];
+  	}
+  	int sum,minsum=INT_MAX;
+  	for(j=0;j<N;j++){
+  		for(k=j+1;k<N;k++){
+  			sum = seq[j]+seq[k];
+  			if(sum<minsum){
+  				minsum=sum;
+  			}
+  		}
+  	}
+  	cout<<minsum<<endl;
+  }
+  return 0;
+  
+}  
+ 
