@@ -1,0 +1,17 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+  int T,i;
+  cin>>T;
+  int n[T];
+  for(i=0;i<T;i++){
+ 	cin>>n[i];
+  }
+  sort(n,n+T);
+  for(i=0;i<T;i++){
+ 	cout<<n[i]<<endl;
+  }
+  return 0;
+  
+}  
