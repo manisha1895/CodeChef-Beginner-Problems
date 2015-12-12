@@ -1,0 +1,32 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+  int i,menu[12];
+  for(i=1;i<=12;i++){
+  	menu[i-1]=pow(2,i-1);
+  }
+  int t,p,count,x,j;
+  cin>>t;
+  for(i=0;i<t;i++){
+  	cin>>p;
+  	count=0;
+  	x=0;
+  	for(j=11;j>=0;j--){
+  		if(menu[j]<=p) break;
+  	}
+  	// j gives the start menu
+  	while(x<p){
+  		if(j>=0 && x+menu[j]<=p) {
+  		  x += menu[j];
+  		  count++;
+  	    }
+  		else j--;
+  	}
+  	cout<<count<<endl;
+  	
+  	
+  }
+  return 0;
+  
+}  
