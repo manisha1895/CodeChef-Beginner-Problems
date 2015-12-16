@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,count,N,x,note;
+  cin>>T;
+  for(i=0;i<T;i++){
+    cin>>N;
+    count=0;
+    x=0;
+    note=100;
+	while(x<N){
+		if(x+note<=N) {
+		  x+= note;
+		  count++;
+	    }
+	    else{
+	    	if(note==100) note=50;
+	    	else if(note==50) note=10;
+	    	else if(note==10) note = 5;
+	    	else if(note==5) note=2;
+	    	else if(note==2) note=1;
+	    }
+	}
+	cout<<count<<endl;
+	 
+  }  
+  return 0;
+  
+}  
