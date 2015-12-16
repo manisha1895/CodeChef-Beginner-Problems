@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int max(int n ,int k){
+	int j,m=0;
+	for(j=1;j<=k;j++){
+		if(n%j>m) m = n%j;
+	}
+	return m;
+	
+}
+int main(){
+  int T,i,N,K;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>N>>K;
+  	cout<<max(N,K)<<endl;
+  }  
+  return 0;
+  
+}  
