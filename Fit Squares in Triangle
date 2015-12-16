@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int num(int b){
+	if(b<4)
+		return 0;
+	int squares = b/4;
+	b -= squares*2;
+	squares *= squares;
+	return squares+2*num(b);
+}
+int main(){
+  int T,i,B;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>B;
+  	int ans = num(B);
+  	cout<<ans<<endl;
+  }  
+  return 0;
+  
+}  
