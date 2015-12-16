@@ -1,0 +1,13 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+  int T,i,n;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>n;
+  	cout<<(int)sqrt(n)<<endl;
+  }  
+  return 0;
+  
+}  
