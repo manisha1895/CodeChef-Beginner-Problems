@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,j,flag;
+  char X[11],Y[11];
+  cin>>T;
+  for(i=0;i<T;i++){
+    cin>>X>>Y;
+    flag=0;
+    for(j=0;X[j]!='\0';j++){
+    	if(X[j]!='?' && Y[j]!='?' && X[j]!=Y[j]){
+    		flag=1;
+    		break;
+    	}
+    }
+    if(flag==1) cout<<"No"<<endl;
+    else cout<<"Yes"<<endl;
+  }  
+  
+  return 0;
+  
+}  
