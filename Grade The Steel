@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,grade;
+  float hardness,carbon,tensile;
+  cin>>T;
+  for(i=0;i<T;i++){
+    cin>>hardness>>carbon>>tensile;
+    if(hardness>50 && carbon<0.7 && tensile>5600) grade=10;
+    else if(hardness>50 && carbon<0.7) grade=9;
+    else if(carbon<0.7 && tensile>5600) grade=8;
+    else if(hardness>50 && tensile>5600) grade=7;
+    else if(hardness<=50 && carbon>=0.7 && tensile<=5600) grade=5;
+    else grade=6;
+    cout<<grade<<endl;
+  }  
+  
+  return 0;
+  
+}  
