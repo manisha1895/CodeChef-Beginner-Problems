@@ -1,0 +1,33 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+int main(){
+  int T,i;
+  cin>>T;
+  for(i=0;i<T;i++){
+     stack<char> S;
+     char exp[400],x;
+     int j;
+     cin>>exp;
+     for(j=0;exp[j]!='\0';j++){
+     	x=exp[j];
+     	if(x=='+' || x=='-' || x=='*' || x=='^' || x=='(' ||x=='/'){
+     		S.push(x);
+     	}
+     	else if(x==')'){
+     		    while(S.top()!='('){
+     			    cout<<S.top();
+     			    S.pop();
+     		    }
+     		    S.pop();
+     	    }
+		else
+			  cout<<x;   
+        
+    }
+    cout<<endl;
+  }
+  
+  return 0;
+  
+}  
