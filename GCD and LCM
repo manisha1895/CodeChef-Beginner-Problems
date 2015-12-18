@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int GCD(int a,int b){
+	return a%b==0?b:GCD(b,a%b);
+}
+int main(){
+  int T,i,A,B;
+  cin>>T;
+  for(i=0;i<T;i++){
+    cin>>A>>B;
+    cout<<GCD(A,B)<<" "<<(A*B)/GCD(A,B)<<endl; //if you do (A/GCD(A,B))*B to avoid long numbers it might happen A/GCD(A,B) give fraction
+  }  
+  
+  return 0;
+  
+}  
