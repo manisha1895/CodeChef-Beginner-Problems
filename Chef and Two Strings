@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,j;
+  cin>>T;
+  for(i=0;i<T;i++){
+     char s1[101],s2[101];
+     cin>>s1>>s2;
+     int min=0,max=0;
+     for(j=0;s1[j];j++){
+     	if(s1[j]!='?' && s2[j]!='?'){
+		    if(s1[j]!=s2[j]){
+     	       min++;
+     	       max++;
+            }
+        }
+     	else{
+     		max++;
+     	}
+     }
+     cout<<min<<" "<<max<<endl;
+  }
+  
+  return 0;
+  
+}  
