@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,L,R,j,dig,n,revn,sum;
+  cin>>T;
+  for(i=0;i<T;i++){
+     cin>>L>>R;
+     sum=0;
+     for(j=L;j<=R;j++){
+     	revn=0;
+     	n=j;
+     	while(n>0){
+     		dig = n%10;
+     		revn *= 10;
+     		revn += dig;
+     		n /= 10;
+     	}
+     	if(j==revn) sum += j;
+     }
+     cout<<sum<<endl;
+  }
+  return 0;
+  
+}  
