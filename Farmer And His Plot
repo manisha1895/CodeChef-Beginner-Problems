@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int HCF(int a,int b){
+	return a%b==0?b:HCF(b,a%b);
+}
+int main(){
+  int T,i,M,N;
+  cin>>T;
+  for(i=0;i<T;i++){
+     cin>>M>>N;
+     int hcf = HCF(M,N);
+     cout<<(M/hcf)*(N/hcf)<<endl;
+  }
+  return 0;
+  
+}  
