@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,N,x,j,y;
+  cin>>T;
+  for(i=0;i<T;i++){
+     cin>>N;
+     x = 0;
+     for(j=0;j<N;j++){
+     	cin>>y;
+     	x ^= y;
+     }
+     cout<<x<<endl;
+  }
+  return 0;
+  
+}  
