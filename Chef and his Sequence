@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int find(int x,int s[],int start){
+	for(int k=start;s[k];k++){
+		if(s[k]==x) return k;
+	}
+	return -1;
+}
+int main(){
+  int T,i,lN,lF,j;
+  cin>>T;
+  for(i=0;i<T;i++){
+  	cin>>lN;
+  	int N[lN];
+  	for(j=0;j<lN;j++){
+  		cin>>N[j];
+  	}
+  	cin>>lF;
+  	int F[lF];
+  	for(j=0;j<lF;j++){
+  		cin>>F[j];
+  	}
+  	int found[lF],begin=0;
+  	for(j=0;j<lF;j++){
+  		found[j]=find(F[j],N,begin);
+  		begin = found[j]+1;
+  	}
+  	bool yes=true;
+  	for(j=0;j<lF;j++){
+  		if(found[j]==-1)
+  		  { 
+  		  	yes = false;
+  		  	break;
+  		  }
+  	}
+  	if(yes) cout<<"Yes"<<endl;
+  	else cout<<"No"<<endl;
+  	
+  }
+  return 0;
+}
