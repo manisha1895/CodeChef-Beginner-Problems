@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,N,K,j;
+  cin>>T;
+  for(i=0;i<T;i++){
+     cin>>N>>K;
+     int grapes[N],r;
+     long long count=0; //long long needed to pass all test cases
+     for(j=0;j<N;j++){
+     	cin>>grapes[j]; // grapes[j] = K*I + r , r>0
+     	r = grapes[j]%K;
+     	if(grapes[j]>=K) count += r<(K-r)?r:K-r; //if grapes[j]>=K it can be made K*I or K*(I+1) for least operations
+     	else count += (K-r); //else it can only be made K*(I+1) since grapes[j]>0
+     }
+     cout<<count<<endl;
+     
+  }
+  return 0;
+  
+}  
