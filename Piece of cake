@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int T,i,j;
+  cin>>T;
+  for(i=0;i<T;i++){
+    char S[51];
+    cin>>S;
+    int letters[26]={0}; //letter[i] stores frequency of letter i .. i=0=a , i=1=b..
+    for(j=0;S[j];j++)
+     letters[S[j]-'a']++;
+    int length = j;
+    for(j=0;j<26;j++){
+    	if(letters[j]==length-letters[j])
+    	  break;
+    }
+    if(j==26) cout<<"NO"<<endl;
+    else cout<<"YES"<<endl;
+  }
+  return 0;
+}
