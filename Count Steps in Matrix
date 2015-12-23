@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> coord; //row and col numbers of matrix elements
+int main(){
+  int T,i,dist,N,j,k,x;
+  coord M[501*501];
+  cin>>T;
+  for(i=0;i<T;i++){
+    cin>>N;
+    for(j=0;j<N;j++){
+    	for(k=0;k<N;k++){
+    		scanf("%d",&x);
+    		M[x] = coord(j,k);
+    	}
+    }
+    dist =0;
+    for(j=2;j<=N*N;j++){
+    	dist += abs(M[j].first-M[j-1].first);
+    	dist += abs(M[j].second-M[j-1].second);
+    }
+    cout<<dist<<endl;
+    
+    
+  }
+  return 0;
+}
